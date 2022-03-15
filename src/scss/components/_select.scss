@@ -1,0 +1,60 @@
+.select2-container{
+    @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, sm)) {
+        width: 25rem !important;
+    } 
+}
+
+.coin__wrapper {
+    grid-gap: 1rem;
+    display: grid;
+    grid-template-columns: 20px 70px 50px 60px;
+    align-items: center;
+    justify-content: center;
+    @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, sm)) {
+        grid-gap: .5rem;
+        grid-template-columns: repeat(3,1fr);
+    } 
+
+    .coin-one {
+        @include font(600,1.4rem,#181B1F);
+    }
+
+    .coin-two,.coin-three {
+        @include font(500,1.4rem,#181B1F);
+    }
+
+    .coin-four,.coin-five {
+        @include font(500,1.4rem,#737373);
+    }
+
+    .coin__text-one {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        margin-left: 1rem;
+        @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, sm)) {
+            margin-left: unset;
+        } 
+    }
+
+    .coin__text-two {
+        grid-column-start: 5;
+        grid-column-end: 5;
+    }
+}
+
+.coin__item {
+    display: contents;
+}
+
+.coin__text {
+    @include font(600,1.4rem,#181B1F);
+    display: flex;
+}
+
+.select2-hidden-accessible {
+    margin:12rem 0 0 0;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    @include font(600,1.4rem,#181B1F);
+}

@@ -1,0 +1,141 @@
+.gamerCoin-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media all and (min-width: map-get($brakepoints, xs)) and (max-width: 1074px) {
+        justify-content: center;
+    }
+
+    .gamerCoin__box {
+        width: 48rem;
+        height: 55rem;
+        box-shadow: 0 0 2rem #0000004D;
+        border-radius: 1rem;
+        margin-top: -9rem;
+        z-index: 1;
+        max-width: 100%;
+        @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, sm)) {
+            width: 29rem;
+        }
+        @media all and (min-width: map-get($brakepoints, xs)) and (max-width: 1100px) {
+            margin-top: 5rem;
+        }  
+     
+        .gamerCoin__hash {
+            height: 46rem;
+            background: transparent radial-gradient(closest-side at 51% 43%, #181B1F 0%,  #26292E 100%) 0% 0% no-repeat padding-box;
+            border-radius: 1rem 1rem 0 0;
+
+            .gamerCoin__box-title {
+                margin-top: 1.9rem;
+            }
+
+            #lottie {
+                text-align: center;
+                svg {
+                    margin-top: 6.6rem;
+                    width: 25.6rem !important;
+                    height: 25.6rem !important;
+                }
+            }
+
+            .gamerCoin__hash-wrapper {
+                @include center;
+               #pasteSVG {
+                background-image: url('/images/paste.png');
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: auto;
+                width: 10%;
+                height: 3rem;
+                position: relative;
+                cursor: pointer;
+               }
+               &:hover{
+                #pasteSVG {
+                    background-image: url('/images/paste.svg');
+                }
+                input {
+                    color: #F9F9F9;
+                }
+               }
+            }
+
+            input {
+                @include font(500,1.8rem,#737373);
+                text-align: center;
+                border: none;
+                outline: none;
+                width: 35.5rem;
+                height: 2.7rem;
+                font-style: italic;
+                background: transparent;
+            }
+
+            label {
+                @include font(700,3.2rem,$white);
+                text-align: center;
+            }
+        }
+
+        .gamerCoin__box-btn {
+            background-color: #181B1F;
+            height: 9rem;
+            box-shadow: 0 0 2rem #0000004D;
+            border-radius: 0 0 1rem 1rem;
+            text-align: center;
+
+            .gamerCoin__btn {
+                @include font(600,1.8rem, #F9F9F9);
+                background-color: #181B1F;
+                border: 0.1rem solid #2C3138;
+                border-radius: 0.3rem;
+                outline: none;
+                cursor: pointer;
+                margin-top: 2rem;
+                width: 24rem;
+                height: 5rem;
+
+                .gamerCoin__btn-wrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                }
+
+                &:hover {
+                    background-color:$white;
+                    color: #181B1F;
+                }
+            }
+        }
+    }
+
+    .gamerCoin__content {
+        width: 58rem;
+        text-align: left;
+        margin-top: 8.4rem;
+        @media all and (min-width: map-get($brakepoints, xs)) and (max-width: 1074px) {
+            text-align: center;
+        } 
+    }
+}
+
+.gamerCoin__content-title {
+    @include font(700,3.6rem,#181B1F);
+}
+
+.gamerCoin__content-describe {
+    @include font(500,1.8rem,#737373);
+    span {
+        @include font(600,1.8rem,#2C3138);
+    }
+}
+
+.gamerCoin__content--bottom {
+    text-align: center;
+    margin-top: 12rem;
+
+    .gamerCoin__content-describe {
+        margin-bottom: 3rem;
+    }
+}

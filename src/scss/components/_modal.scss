@@ -1,0 +1,25 @@
+.modal {
+    width: 42rem;
+    height: 32.4rem;
+    background: #F9F9F9 0% 0% no-repeat padding-box;
+    box-shadow: 0 0 1rem #171A1F80;
+    border-radius: 1rem;
+    max-width: 100%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: none;
+    @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, sm)) {
+        width: 29rem;
+    } 
+    .modal__title {
+        text-align: center;
+        @include font(600,3.2rem,#F9F9F9);
+        margin-top: -5.5rem;
+    }
+    .modal_content {
+        height: 100%;
+    }
+}

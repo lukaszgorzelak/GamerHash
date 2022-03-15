@@ -1,0 +1,12 @@
+@mixin font($weight,$size,$color) {
+    font-family: 'Rajdhani',sans-serif;
+    font-weight: $weight;
+    font-size: $size;
+    color:$color;
+}
+
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
